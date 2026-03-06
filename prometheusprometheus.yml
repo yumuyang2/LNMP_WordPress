@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+scrape_configs:
+  - job_name: "node_exporter"
+    static_configs:
+      - targets:
+        - "172.26.51.246:9100"
+        - "172.26.51.247:9100"
+        - "172.26.51.248:9100"
+        labels:
+          group: "production"
